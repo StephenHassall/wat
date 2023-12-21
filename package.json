@@ -1,0 +1,27 @@
+{
+  "name": "wat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Examples and information about Web Assembly WAT",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenHassall/wat.git"
+  },
+  "keywords": [
+    "WAT",
+    "WebAssembly"
+  ],
+  "author": "Stephen Paul Hassall",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/StephenHassall/wat/issues"
+  },
+  "homepage": "https://github.com/StephenHassall/wat#readme"
+}

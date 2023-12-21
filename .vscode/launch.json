@@ -1,0 +1,80 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "f64-compare",
+            "program": "${workspaceFolder}\\f64-compare\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "f64-math",
+            "program": "${workspaceFolder}\\f64-math\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "i32-compare",
+            "program": "${workspaceFolder}\\i32-compare\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "i32-math",
+            "program": "${workspaceFolder}\\i32-math\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "if-then-else",
+            "program": "${workspaceFolder}\\if-then-else\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "in-range",
+            "program": "${workspaceFolder}\\in-range\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "loop-block",
+            "program": "${workspaceFolder}\\loop-block\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "math",
+            "program": "${workspaceFolder}\\math\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "reverse-string",
+            "program": "${workspaceFolder}\\reverse-string\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "i32-bitwise",
+            "program": "${workspaceFolder}\\i32-bitwise\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "type-convert",
+            "program": "${workspaceFolder}\\type-convert\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "vector-2d",
+            "program": "${workspaceFolder}\\vector-2d\\run.js"
+        }
+    ]
+}
