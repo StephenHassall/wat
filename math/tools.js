@@ -104,7 +104,7 @@ export default class MathTools  {
 
     /**
      * WAT get_fractorial code for testing algorithms.
-     * @param {Number} $n The number to get the factorial for (0 to 19).
+     * @param {Number} $n The number to get the factorial for (1 to 20).
      * @return {Number} The factorial for the given number (as a float).
      */
     static wat_get_fractorial($n) {
@@ -115,26 +115,26 @@ export default class MathTools  {
         $result = 0;
 
         // Check $n and set result
-        if ($n === 0) $result = 1.0;
-        if ($n === 1) $result = 2.0;
-        if ($n === 2) $result = 6.0;
-        if ($n === 3) $result = 24.0;
-        if ($n === 4) $result = 120.0;
-        if ($n === 5) $result = 720.0;
-        if ($n === 6) $result = 5040.0;
-        if ($n === 7) $result = 40320.0;
-        if ($n === 8) $result = 362880.0;
-        if ($n === 9) $result = 3628800.0;
-        if ($n === 10) $result = 39916800.0;
-        if ($n === 11) $result = 479001600.0;
-        if ($n === 12) $result = 6227020800.0;
-        if ($n === 13) $result = 87178291200.0;
-        if ($n === 14) $result = 1307674368000.0;
-        if ($n === 15) $result = 20922789888000.0;
-        if ($n === 16) $result = 355687428096000.0;
-        if ($n === 17) $result = 6402373705728000.0;
-        if ($n === 18) $result = 121645100408832000.0;
-        if ($n === 19) $result = 2432902008176640000.0;
+        if ($n === 1) $result = 1.0;
+        if ($n === 2) $result = 2.0;
+        if ($n === 3) $result = 6.0;
+        if ($n === 4) $result = 24.0;
+        if ($n === 5) $result = 120.0;
+        if ($n === 6) $result = 720.0;
+        if ($n === 7) $result = 5040.0;
+        if ($n === 8) $result = 40320.0;
+        if ($n === 9) $result = 362880.0;
+        if ($n === 10) $result = 3628800.0;
+        if ($n === 11) $result = 39916800.0;
+        if ($n === 12) $result = 479001600.0;
+        if ($n === 13) $result = 6227020800.0;
+        if ($n === 14) $result = 87178291200.0;
+        if ($n === 15) $result = 1307674368000.0;
+        if ($n === 16) $result = 20922789888000.0;
+        if ($n === 17) $result = 355687428096000.0;
+        if ($n === 18) $result = 6402373705728000.0;
+        if ($n === 19) $result = 121645100408832000.0;
+        if ($n === 20) $result = 2432902008176640000.0;
 
         // Return the $result
         return $result;
@@ -266,8 +266,8 @@ export default class MathTools  {
             // Workout pow($x, $term2p1)
             $termResult = MathTools.wat_math_pow($x, $term2p1);
 
-            // Get the $fractorial for $term2
-            $fractorial = MathTools.wat_get_fractorial($term2);
+            // Get the $fractorial for $term2p1
+            $fractorial = MathTools.wat_get_fractorial($term2p1);
 
             // Workout $termResult /= $fractorial
             $termResult /= $fractorial;
@@ -297,7 +297,6 @@ export default class MathTools  {
         let $term;
         let $termResult;
         let $term2;
-        let $term2m1;
         let $fractorial;
 
         // Set $result to 1
@@ -308,14 +307,11 @@ export default class MathTools  {
             // Workout $term * 2 (we can shift left to do this)
             $term2 = $term << 1;
 
-            // Workout ($term * 2) - 1
-            $term2m1 = $term2 - 1;
-
             // Workout pow($x, $term2)
             $termResult = MathTools.wat_math_pow($x, $term2);
 
-            // Get the $fractorial for $term2m1
-            $fractorial = MathTools.wat_get_fractorial($term2m1);
+            // Get the $fractorial for $term2
+            $fractorial = MathTools.wat_get_fractorial($term2);
 
             // Workout $termResult /= $fractorial
             $termResult /= $fractorial;

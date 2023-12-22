@@ -99,8 +99,6 @@
             18 = 6402373705728000
             19 = 121645100408832000
             20 = 2432902008176640000
-
-        However, we want to treat it like a zero index array
     ;)
     (func $get_fractorial (param $n i32) (result f64)
         ;; Set locals
@@ -111,26 +109,26 @@
         local.set $result
 
         ;; Check $n and set result
-        (if (i32.eq (local.get $n)(i32.const 0)) (then (f64.const 1.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 1)) (then (f64.const 2.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 2)) (then (f64.const 6.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 3)) (then (f64.const 24.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 4)) (then (f64.const 120.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 5)) (then (f64.const 720.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 6)) (then (f64.const 5040.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 7)) (then (f64.const 40320.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 8)) (then (f64.const 362880.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 9)) (then (f64.const 3628800.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 10)) (then (f64.const 39916800.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 11)) (then (f64.const 479001600.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 12)) (then (f64.const 6227020800.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 13)) (then (f64.const 87178291200.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 14)) (then (f64.const 1307674368000.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 15)) (then (f64.const 20922789888000.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 16)) (then (f64.const 355687428096000.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 17)) (then (f64.const 6402373705728000.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 18)) (then (f64.const 121645100408832000.0) (local.set $result)))
-        (if (i32.eq (local.get $n)(i32.const 19)) (then (f64.const 2432902008176640000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 1)) (then (f64.const 1.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 2)) (then (f64.const 2.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 3)) (then (f64.const 6.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 4)) (then (f64.const 24.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 5)) (then (f64.const 120.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 6)) (then (f64.const 720.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 7)) (then (f64.const 5040.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 8)) (then (f64.const 40320.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 9)) (then (f64.const 362880.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 10)) (then (f64.const 3628800.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 11)) (then (f64.const 39916800.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 12)) (then (f64.const 479001600.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 13)) (then (f64.const 6227020800.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 14)) (then (f64.const 87178291200.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 15)) (then (f64.const 1307674368000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 16)) (then (f64.const 20922789888000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 17)) (then (f64.const 355687428096000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 18)) (then (f64.const 6402373705728000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 19)) (then (f64.const 121645100408832000.0) (local.set $result)))
+        (if (i32.eq (local.get $n)(i32.const 20)) (then (f64.const 2432902008176640000.0) (local.set $result)))
         
         ;; Set the return $result
         local.get $result
@@ -413,8 +411,8 @@
             call $math_pow
             local.set $termResult
 
-            ;; Get the $fractorial for $term2
-            local.get $term2
+            ;; Get the $fractorial for $term2p1
+            local.get $term2p1
             call $get_fractorial
             local.set $fractorial
 
@@ -476,7 +474,6 @@
         (local $term i32)
         (local $termResult f64)
         (local $term2 i32)
-        (local $term2m1 i32)
         (local $fractorial f64)
 
         ;; Set $result to 1
@@ -495,20 +492,14 @@
             i32.shl
             local.set $term2
 
-            ;; Workout ($term * 2) - 1
-            local.get $term2
-            i32.const 1
-            i32.sub
-            local.set $term2m1
-
             ;; Workout pow($x, $term2)
             local.get $x
             local.get $term2
             call $math_pow
             local.set $termResult
 
-            ;; Get the $fractorial for $term2m1
-            local.get $term2m1
+            ;; Get the $fractorial for $term2
+            local.get $term2
             call $get_fractorial
             local.set $fractorial
 
