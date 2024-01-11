@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 export default class Vector2d  {
     /**
-     * Static WASM file data. We want to only load it data once.
+     * Static WASM module. We want to only load and compile it once.
      */
     static _module;
 

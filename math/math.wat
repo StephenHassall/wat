@@ -1,7 +1,7 @@
 (; 
     WASM does not have a number of math functions that are common in other programming languages. Therefore
-    I have created some of them, which you can use within your own WAT code. I have exported the function
-    for testing, but you do not need to include that part if they are only being used internally within WAT.
+    I have created some of them, which you can use within your own WAT code. I have exported the functions
+    for testing, but you do not need to include those parts if they are only being used internally within WAT.
 ;)
 (module
     (;

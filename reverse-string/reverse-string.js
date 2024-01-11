@@ -5,7 +5,6 @@ import { readFile } from "node:fs/promises";
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 export default class ReverseString  {
     /**
      * Fetch and load the WASM file.

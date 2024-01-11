@@ -7,6 +7,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "date-time",
+            "program": "${workspaceFolder}\\date-time\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "f64-compare",
             "program": "${workspaceFolder}\\f64-compare\\run.js"
         },
@@ -15,6 +21,12 @@
             "request": "launch",
             "name": "f64-math",
             "program": "${workspaceFolder}\\f64-math\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "i32-bitwise",
+            "program": "${workspaceFolder}\\i32-bitwise\\run.js"
         },
         {
             "type": "node",
@@ -55,14 +67,26 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "reverse-string",
-            "program": "${workspaceFolder}\\reverse-string\\run.js"
+            "name": "memory-control",
+            "program": "${workspaceFolder}\\memory-control\\run.js"
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "i32-bitwise",
-            "program": "${workspaceFolder}\\i32-bitwise\\run.js"
+            "name": "memory-read-write",
+            "program": "${workspaceFolder}\\memory-read-write\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "memory-share",
+            "program": "${workspaceFolder}\\memory-share\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "reverse-string",
+            "program": "${workspaceFolder}\\reverse-string\\run.js"
         },
         {
             "type": "node",
