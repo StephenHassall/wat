@@ -13,6 +13,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "exception",
+            "program": "${workspaceFolder}\\exception\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "f64-compare",
             "program": "${workspaceFolder}\\f64-compare\\run.js"
         },
@@ -21,6 +27,18 @@
             "request": "launch",
             "name": "f64-math",
             "program": "${workspaceFolder}\\f64-math\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "global",
+            "program": "${workspaceFolder}\\global\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "global-share",
+            "program": "${workspaceFolder}\\global-share\\run.js"
         },
         {
             "type": "node",
@@ -87,6 +105,30 @@
             "request": "launch",
             "name": "reverse-string",
             "program": "${workspaceFolder}\\reverse-string\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "quick-sort",
+            "program": "${workspaceFolder}\\quick-sort\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "table",
+            "program": "${workspaceFolder}\\table\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "table-callback",
+            "program": "${workspaceFolder}\\table-callback\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "table-get-set",
+            "program": "${workspaceFolder}\\table-get-set\\run.js"
         },
         {
             "type": "node",
