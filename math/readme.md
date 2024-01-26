@@ -3,7 +3,7 @@
 WASM does not have a number of math functions that are common in other programming languages. Therefore
 I have created some of them, which you can use within your own WAT code.
 
-The current functions available are
+All functions are prefixed with "math_" The current functions available are as follows.
 
 |Instruction|Details|
 |---|---|

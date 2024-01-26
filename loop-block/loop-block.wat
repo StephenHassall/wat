@@ -219,4 +219,64 @@
 
         ;; The last item on the stack is the return value, which is the total amount
     )
+
+    ;; Select from 3 or default function
+    (func (export "selectFrom3Default")  (param $value0 i32) (param $value1 i32) (param $value2 i32) (param $default i32) (param $control i32) (result i32)
+        ;; Set locals
+        (local $result i32)
+
+        ;; Example of a switch case using blocks and the br_table instruction
+        block $switch
+        block $option0
+        block $option1
+        block $option2
+        block $default
+
+        ;; The control value needs to be 0=$option0, 1=$option1, 2=$option3, or it defaults to the last one
+        local.get $control
+        br_table $option0 $option1 $option2 $default
+
+        ;; default
+        end
+            ;; Set result to default
+            local.get $default
+            local.set $result
+
+            ;; Break the switch block
+            br $switch
+
+        ;; option 2
+        end
+            ;; Set result to value 
+            local.get $value2
+            local.set $result
+
+            ;; Break the switch block
+            br $switch
+
+        ;; option 1
+        end
+            ;; Set result to value 1
+            local.get $value1
+            local.set $result
+
+            ;; Break the switch block
+            br $switch
+
+        ;; option 0
+        end
+            ;; Set result to value 0
+            local.get $value0
+            local.set $result
+
+            ;; Break the switch block
+            br $switch
+
+        ;; End of switch
+        end
+
+        ;; Push the result on to the stack as the return result
+        local.get $result
+    )
+
 )

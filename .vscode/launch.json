@@ -7,6 +7,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "call-function",
+            "program": "${workspaceFolder}\\call-function\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "date-time",
             "program": "${workspaceFolder}\\date-time\\run.js"
         },
@@ -67,6 +73,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "import-function",
+            "program": "${workspaceFolder}\\import-function\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "in-range",
             "program": "${workspaceFolder}\\in-range\\run.js"
         },
@@ -103,14 +115,32 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "quick-sort",
+            "program": "${workspaceFolder}\\quick-sort\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "reverse-string",
             "program": "${workspaceFolder}\\reverse-string\\run.js"
         },
         {
             "type": "node",
             "request": "launch",
-            "name": "quick-sort",
-            "program": "${workspaceFolder}\\quick-sort\\run.js"
+            "name": "select",
+            "program": "${workspaceFolder}\\select\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "start",
+            "program": "${workspaceFolder}\\start\\run.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "string",
+            "program": "${workspaceFolder}\\string\\run.js"
         },
         {
             "type": "node",

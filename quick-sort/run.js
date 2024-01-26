@@ -2,7 +2,6 @@
  * Run test function for quick sort in nodejs.
  */
 import QuickSortTest from './quick-sort.js';
-import MemoryDump from "../memory-dump.js";
 
 // Create and run test function
 const run = async function() {
