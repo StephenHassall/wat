@@ -2,9 +2,9 @@
 
 This is a collection of WAT code examples and some useful libraries that should help you understand how it all works and encourage you make a start in making something cool for yourself.
 
-If you are using Visual Studio Code then I recommend using the ["WebAssebly"](https://marketplace.visualstudio.com/items?itemName=dtsvet.vscode-wasm) extension. This will highlight WAT file syntax. It can be used to convert a WAT file into WASM, but I do not recommend it.
+If you are using Visual Studio Code then I recommend using the ["WebAssembly"](https://marketplace.visualstudio.com/items?itemName=dtsvet.vscode-wasm) extension. This will highlight WAT file syntax. It can be used to convert a WAT file into WASM, but I do not recommend it.
 
-You will need to download and build the [WABT: WebAssebly Binary Toolkit](https://github.com/WebAssembly/wabt). I did find it tricky to build the applications in Windows, so good luck.
+You will need to download and build the [WABT: WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt). I did find it tricky to build the applications in Windows, so good luck.
 
 To build WAT files you will need to use the `wat2wasm` tool. When debugging you may want to include the switch command `--debug-names`.
 

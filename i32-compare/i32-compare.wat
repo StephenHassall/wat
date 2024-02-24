@@ -169,4 +169,56 @@
 
         ;; The last item on the stack is the return value, which is the result of the last compare instruction
     )
+
+    ;; Check age is within range #1
+    (func (export "ageWithinRange1") (param $age i32) (param $min i32) (param $max i32) (result i32)
+        ;; Check over min limit
+        local.get $age
+        local.get $min
+        i32.ge_s
+
+        ;; If over min limit
+        if
+            ;; Check under max limit
+            local.get $age
+            local.get $max
+            i32.le_s
+
+            ;; If under max limit
+            if
+                ;; Result is 1 (within range)
+                i32.const 1
+                return
+            end
+        end
+
+        ;; Result 0 (not within range)
+        i32.const 0
+    )
+
+    ;; Check age is within range #2
+    (func (export "ageWithinRange2") (param $age i32) (param $min i32) (param $max i32) (result i32)
+        ;; Check over min limit
+        local.get $age
+        local.get $min
+        i32.ge_s
+
+        ;; Check under max limit
+        local.get $age
+        local.get $max
+        i32.le_s
+
+        ;; Perform bitwise AND on both compare results
+        i32.and
+
+        ;; If $age >= $min AND $age <= $max
+        if
+            ;; Result is 1 (within range)
+            i32.const 1
+            return
+        end
+
+        ;; Result 0 (not within range)
+        i32.const 0
+    )
 )

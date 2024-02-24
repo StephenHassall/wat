@@ -116,4 +116,14 @@ const run = async function() {
     console.log('isLessThanOrEqualUnsigned(-1, 0) = ' + i32Compare.isLessThanOrEqualUnsigned(-1, 0));
     console.log('isLessThanOrEqualUnsigned(-1, 1) = ' + i32Compare.isLessThanOrEqualUnsigned(-1, 1));
     console.log('isLessThanOrEqualUnsigned(1, -1) = ' + i32Compare.isLessThanOrEqualUnsigned(1, -1));
+
+    // Check ageWithinRange1 function
+    console.log('ageWithinRange1(20, 18, 65) = ' + i32Compare.ageWithinRange1(20, 18, 65));
+    console.log('ageWithinRange1(10, 18, 65) = ' + i32Compare.ageWithinRange1(10, 18, 65));
+    console.log('ageWithinRange1(100, 18, 65) = ' + i32Compare.ageWithinRange1(100, 18, 65));
+
+    // Check ageWithinRange2 function
+    console.log('ageWithinRange2(20, 18, 65) = ' + i32Compare.ageWithinRange2(20, 18, 65));
+    console.log('ageWithinRange2(10, 18, 65) = ' + i32Compare.ageWithinRange2(10, 18, 65));
+    console.log('ageWithinRange2(100, 18, 65) = ' + i32Compare.ageWithinRange2(100, 18, 65));
 }();

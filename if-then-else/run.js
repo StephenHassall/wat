@@ -33,4 +33,8 @@ const run = async function() {
     console.log('example5(1, 1, 0) = ' + ifThenElse.example5(1, 1, 0));
     console.log('example5(0, 1, 0) = ' + ifThenElse.example5(0, 1, 0));
     console.log('example5(2, 1, 0) = ' + ifThenElse.example5(2, 1, 0));
+
+    // Check example 6 function
+    console.log('example6(0, 3) = ' + ifThenElse.example6(0, 3));
+    console.log('example6(1, 3) = ' + ifThenElse.example6(1, 3));
 }();

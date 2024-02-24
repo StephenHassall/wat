@@ -94,4 +94,15 @@ export default class I32Math  {
         // Call and return the WASM example5 function
         return this._instance.exports.example5(condition, returnTrue, returnFalse);
     }
+
+    /**
+     * Example 6.
+     * @param {Number} condition The condition value.
+     * @param {Number} value The value to add 10 or 20 to.
+     * @return {Number} The return result.
+     */
+    example6(condition, value) {
+        // Call and return the WASM example6 function
+        return this._instance.exports.example6(condition, value);
+    }
 }

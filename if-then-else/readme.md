@@ -31,13 +31,3 @@ error: type mismatch in return, expected [i32] but got []
 ```
 
 It seems to make no logically sence, but this is not a normal programming language, this is a "S Expression" format of a program. You need to look at the whole `if...end` block on its own, with its own stack input requirements and the outputs that will be put on the stack at the end, irrespective or any `return` commands.
-
-```
-if
-    ;; Push the return value on to the stack
-    local.get $value
-    return
-end
-```
-
-We push another copy of `$value` on to the stack, just before we call the `return` command, which will be the returned value. This seems waistful but the wat2wasm process needs it. Maybe it needs improving or I don't understand something here.

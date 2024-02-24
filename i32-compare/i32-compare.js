@@ -228,4 +228,41 @@ export default class I32Compare  {
         // Otherwise it is not
         return false;
     }
+
+    /**
+     * Checks to see if the given age is within the given range. This is the first example using nested IF statements.
+     * @param {Number} age The age of check.
+     * @param {Number} min The minimum value of the range.
+     * @param {Number} max The maximum value of the range.
+     * @return {Boolean} True if the age is within the range, false if it is not.
+     */
+    ageWithinRange1(age, min, max) {
+        // Call the WASM ageWithinRange1 function
+        const result = this._instance.exports.ageWithinRange1(age, min, max);
+
+        // If result is 1 then age is within range
+        if (result === 1) return true;
+
+        // Otherwise it is not
+        return false;
+    }
+
+    /**
+     * Checks to see if the given age is within the given range. This is the second example using a bitwise AND command
+     * on the compare results.
+     * @param {Number} age The age of check.
+     * @param {Number} min The minimum value of the range.
+     * @param {Number} max The maximum value of the range.
+     * @return {Boolean} True if the age is within the range, false if it is not.
+     */
+    ageWithinRange2(age, min, max) {
+        // Call the WASM ageWithinRange2 function
+        const result = this._instance.exports.ageWithinRange2(age, min, max);
+
+        // If result is 1 then age is within range
+        if (result === 1) return true;
+
+        // Otherwise it is not
+        return false;
+    }
 }

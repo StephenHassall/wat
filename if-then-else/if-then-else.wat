@@ -1,7 +1,5 @@
 ;; Looking a IF THEN ELSE END instructions
 (module
-
-
     ;; Example 1 function
     (func (export "example1") (param $condition i32) (param $returnTrue i32) (param $returnFalse i32) (result i32)
         ;; The return value
@@ -115,5 +113,28 @@
         )
 
         ;; The last item on the stack is the return value, which is the result of the last math instruction
+    )
+
+    ;; Example 6 function
+    (func (export "example6") (param $condition i32) (param $value i32) (result i32)
+        ;; Push the value onto the stack outside the IF block
+        local.get $value
+
+        ;; Push the condition on the stack
+        local.get $condition
+
+        ;; If condition met. This block is expecting an i32 value on the stack
+        ;; and it wants to leave the block putting an i32 value on the stack.
+        if (param i32) (result i32)
+            ;; Add 10 to the value
+            i32.const 10
+            i32.add
+        else
+            ;; Add 20 to the value
+            i32.const 20
+            i32.add
+        end
+
+        ;; The last item on the stack is the return value
     )
 )
