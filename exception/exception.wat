@@ -16,7 +16,7 @@
 
     ;; Divide by zero
     (func (export "divideByZero") (result i32)
-        ;; Create a run time exception by dividing by zero
+        ;; Create a runtime exception by dividing by zero
         i32.const 1
         i32.const 0
         i32.div_s

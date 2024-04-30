@@ -10,7 +10,7 @@
     ;; Create callback table
     (table $tableCallback 1 funcref)
 
-    ;; Declare the elemant compare callback functions that can be used
+    ;; Declare the element compare callback functions that can be used
     (elem declare func $compareByte $compareFloat64)
 
     (;

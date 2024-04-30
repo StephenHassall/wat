@@ -31,6 +31,30 @@
         i32.store
     )
 
+    ;; Store 32 bit integer with offset
+    (func (export "store32BitIntegerWithOffset") (param $value i32) (param $memoryOffset i32)
+        ;; Set the offset from the start of the memory to store the 32 bit (4 byte) integer
+        local.get $memoryOffset
+
+        ;; Set the 32 bit (4 byte) integer value to store
+        local.get $value
+
+        ;; Store the 32 bit (4 byte) integer value in memory at the offset (with extra offset)
+        i32.store offset=2
+    )
+
+    ;; Store 32 bit integer with align 2
+    (func (export "store32BitIntegerWithAlign2") (param $value i32) (param $memoryOffset i32)
+        ;; Set the offset from the start of the memory to store the 32 bit (4 byte) integer
+        local.get $memoryOffset
+
+        ;; Set the 32 bit (4 byte) integer value to store
+        local.get $value
+
+        ;; Store the 32 bit (4 byte) integer value in memory at the offset (with alignment of 2 bytes (16 bits))
+        i32.store align=4
+    )
+
     ;; Store 16 bit integer
     (func (export "store16BitInteger") (param $value i32) (param $memoryOffset i32)
         ;; Set the offset from the start of the memory to store the 16 bit (2 byte) integer

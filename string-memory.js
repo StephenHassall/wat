@@ -14,7 +14,7 @@ export default class StringMemory  {
         // Create text encoder
         const encoder = new TextEncoder();
 
-        //  Create the Uint8Array (UTC-8) of the text
+        //  Create the Uint8Array (UTF-8) of the text
         const uint8ArrayText = encoder.encode(text);
 
         // Create Uint8Array of the memory
@@ -46,7 +46,7 @@ export default class StringMemory  {
         // Create text decoder
         const textDecoder = new TextDecoder("UTF-8");
 
-        // Decode the Uint8Array to (UTC-8) text
+        // Decode the Uint8Array to (UTF-8) text
         const result = textDecoder.decode(uint8ArrayText);
 
         // Return the resulting string

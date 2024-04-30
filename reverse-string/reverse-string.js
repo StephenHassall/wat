@@ -72,7 +72,7 @@ export default class ReverseString  {
             this._memoryPageSize = textPageSize;
         }
 
-        // Create text encoder and create the Uint8Array (UTC-8) of the text
+        // Create text encoder and create the Uint8Array (UTF-8) of the text
         let encoder = new TextEncoder();
         let uint8ArrayText = encoder.encode(text);
 
@@ -88,7 +88,7 @@ export default class ReverseString  {
         // Create Uint8Array from the WASM memory containing only the text (not the null end)
         uint8ArrayText = new Uint8Array(this._memory.buffer, 0, text.length);
 
-        // Create text decoder and decode the Uint8Array to (UTC-8) text
+        // Create text decoder and decode the Uint8Array to (UTF-8) text
         const textDecoder = new TextDecoder("UTF-8");
         const result = textDecoder.decode(uint8ArrayText);
 

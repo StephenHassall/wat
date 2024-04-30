@@ -18,7 +18,23 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
+
+    // Check store 32 bit integer with extra offset
+    console.log('store32BitIntegerWithOffset');
+    memoryReadWrite.store32BitIntegerWithOffset(0b00000100_00000011_00000010_00000001, 2);
+    MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
+
+    // Clear memory for next test
+    memoryReadWrite.clear(0, 16);
+
+    // Check store 32 bit integer with align
+    console.log('store32BitIntegerWithAlign2');
+    memoryReadWrite.store32BitIntegerWithAlign2(0b00000100_00000011_00000010_00000001, 1);
+    MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
+
+    // Clear memory for next test
+    memoryReadWrite.clear(0, 16);
 
     // Check store 16 bit integer
     console.log('store16BitInteger');
@@ -27,7 +43,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check store 8 bit integer
     console.log('store8BitInteger');
@@ -36,7 +52,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 32 bit integer
     console.log('load32BitInteger');
@@ -47,7 +63,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 16 bit integer signed
     console.log('load16BitIntegerSigned');
@@ -58,7 +74,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 16 bit integer unsigned
     console.log('load16BitIntegerUnsigned');
@@ -69,7 +85,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 8 bit integer signed
     console.log('load8BitIntegerSigned');
@@ -80,7 +96,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 8 bit integer unsigned
     console.log('load8BitIntegerUnsigned');
@@ -91,7 +107,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check load 32 bit integer with offset
     console.log('load32BitIntegerOffset2');
@@ -101,7 +117,7 @@ const run = async function() {
     MemoryDump.show(memoryReadWrite._instance.exports.memory.buffer, 0, 8);
 
     // Clear memory for next test
-    memoryReadWrite.clear(0, 0, 16);
+    memoryReadWrite.clear(0, 16);
 
     // Check store 64 bit float
     console.log('store64BitFloat');

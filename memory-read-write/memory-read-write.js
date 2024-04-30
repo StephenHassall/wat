@@ -56,6 +56,26 @@ export default class MemoryReadWrite  {
     }
 
     /**
+     * Store a 32 bit integer in memory at the given memory offset with an extra offset of 2.
+     * @param {Number} value The 32 bit integer value to store.
+     * @param {Number} memoryOffset The location in memory to put the integer value.
+     */
+    store32BitIntegerWithOffset(value, memoryOffset) {
+        // Call the WASM store32BitIntegerWithOffset function
+        this._instance.exports.store32BitIntegerWithOffset(value, memoryOffset);
+    }
+
+    /**
+     * Store a 32 bit integer in memory at the given memory offset with an align of 16.
+     * @param {Number} value The 32 bit integer value to store.
+     * @param {Number} memoryOffset The location in memory to put the integer value.
+     */
+    store32BitIntegerWithAlign2(value, memoryOffset) {
+        // Call the WASM store32BitIntegerWithAlign2 function
+        this._instance.exports.store32BitIntegerWithAlign2(value, memoryOffset);
+    }
+
+    /**
      * Store the first 16 bits of an integer in memory at the given memory offset.
      * @param {Number} value The 32 bit integer value, which we take the first 16 bits, to store.
      * @param {Number} memoryOffset The location in memory to put the integer value.
